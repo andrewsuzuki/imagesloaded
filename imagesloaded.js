@@ -315,14 +315,14 @@ Background.prototype.confirm = function( isLoaded, message ) {
 
 // -------------------------- jQuery -------------------------- //
 
-ImagesLoaded.makeJQueryPlugin = function() {
-  // $().imagesLoaded()
-  $.fn.imagesLoaded = function( options, callback ) {
-    var instance = new ImagesLoaded( this, options, callback );
-    return instance.jqDeferred.promise( $(this) );
-  };
-};
-// try making plugin
-ImagesLoaded.makeJQueryPlugin();
+// ImagesLoaded.makeJQueryPlugin = function() {
+//   // $().imagesLoaded()
+//   $.fn.imagesLoaded = function( options, callback ) {
+//     var instance = new ImagesLoaded( this, options, callback );
+//     return instance.jqDeferred.promise( $(this) );
+//   };
+// };
+// // try making plugin
+// ImagesLoaded.makeJQueryPlugin();
 
 module.exports = ImagesLoaded;
