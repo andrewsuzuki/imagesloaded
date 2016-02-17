@@ -4,42 +4,10 @@
  * MIT License
  */
 
-( function( window, factory ) { 'use strict';
-  // universal module definition
-
-  /*global define: false, module: false, require: false */
-
-  if ( typeof define == 'function' && define.amd ) {
-    // AMD
-    define( [
-      'ev-emitter/ev-emitter'
-    ], function( EvEmitter ) {
-      return factory( window, EvEmitter );
-    });
-  } else if ( typeof module == 'object' && module.exports ) {
-    // CommonJS
-    module.exports = factory(
-      window,
-      require('ev-emitter')
-    );
-  } else {
-    // browser global
-    window.imagesLoaded = factory(
-      window,
-      window.EvEmitter
-    );
-  }
-
-})( window,
-
-// --------------------------  factory -------------------------- //
-
-function factory( window, EvEmitter ) {
-
 'use strict';
 
-var $ = window.jQuery;
-var console = window.console;
+var $ = require('jquery');
+var EvEmitter = require('ev-emitter');
 
 // -------------------------- helpers -------------------------- //
 
@@ -363,8 +331,4 @@ ImagesLoaded.makeJQueryPlugin = function( jQuery ) {
 // try making plugin
 ImagesLoaded.makeJQueryPlugin();
 
-// --------------------------  -------------------------- //
-
-return ImagesLoaded;
-
-});
+module.exports = ImagesLoaded;

@@ -4,7 +4,8 @@
   "description": "You images done yet or what?",
   "main": "imagesloaded.js",
   "dependencies": {
-    "ev-emitter": "~1.0.0"
+    "ev-emitter": "~1.0.0",
+    "jquery": "^2.2.0"
   },
   "devDependencies": {
     "chalk": "^1.1.1",
